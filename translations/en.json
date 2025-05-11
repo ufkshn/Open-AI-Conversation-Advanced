@@ -1,0 +1,43 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "Custom OpenAI Conversation",
+                "description": "Enter your OpenAI API key and optional base URL",
+                "data": {
+                    "api_key": "API Key",
+                    "base_url": "Base URL (optional)"
+                }
+            }
+        },
+        "error": {
+            "cannot_connect": "Failed to connect",
+            "invalid_auth": "Invalid authentication",
+            "unknown": "Unexpected error"
+        },
+        "abort": {
+            "already_configured": "Device is already configured"
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "title": "Custom OpenAI Conversation Options",
+                "description": "Configure your OpenAI conversation settings",
+                "data": {
+                    "prompt": "System Prompt",
+                    "llm_hass_api": "Home Assistant LLM APIs",
+                    "recommended": "Use recommended settings",
+                    "chat_model": "Chat Model",
+                    "max_tokens": "Max Tokens",
+                    "top_p": "Top P",
+                    "temperature": "Temperature",
+                    "reasoning_effort": "Reasoning Effort",
+                    "web_search": "Enable Web Search",
+                    "search_context_size": "Search Context Size",
+                    "user_location": "Use User Location"
+                }
+            }
+        }
+    }
+} 
