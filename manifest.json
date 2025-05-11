@@ -1,11 +1,11 @@
 {
-  "domain": "openai_conversation",
-  "name": "OpenAI Conversation",
+  "domain": "openai_conversation_advanced",
+  "name": "OpenAI Conversation Advanced",
   "after_dependencies": ["assist_pipeline", "intent"],
-  "codeowners": ["@balloob"],
+  "codeowners": ["@ufuksahin"],
   "config_flow": true,
   "dependencies": ["conversation"],
-  "documentation": "https://www.home-assistant.io/integrations/openai_conversation",
+  "documentation": "https://github.com/ufuksahin/openai-conversation-advanced",
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "requirements": ["openai==1.76.2"]

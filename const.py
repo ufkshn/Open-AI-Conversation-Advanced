@@ -2,7 +2,7 @@
 
 import logging
 
-DOMAIN = "openai_conversation"
+DOMAIN = "openai_conversation_advanced"
 LOGGER: logging.Logger = logging.getLogger(__package__)
 
 CONF_CHAT_MODEL = "chat_model"
@@ -21,6 +21,10 @@ CONF_WEB_SEARCH_CITY = "city"
 CONF_WEB_SEARCH_REGION = "region"
 CONF_WEB_SEARCH_COUNTRY = "country"
 CONF_WEB_SEARCH_TIMEZONE = "timezone"
+CONF_BASE_URL = "base_url"
+
+DEFAULT_BASE_URL = "https://api.openai.com/v1"
+
 RECOMMENDED_CHAT_MODEL = "gpt-4o-mini"
 RECOMMENDED_MAX_TOKENS = 150
 RECOMMENDED_REASONING_EFFORT = "low"

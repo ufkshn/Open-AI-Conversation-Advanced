@@ -54,6 +54,8 @@ from .const import (
     CONF_WEB_SEARCH_REGION,
     CONF_WEB_SEARCH_TIMEZONE,
     CONF_WEB_SEARCH_USER_LOCATION,
+    CONF_BASE_URL,
+    DEFAULT_BASE_URL,
     DOMAIN,
     RECOMMENDED_CHAT_MODEL,
     RECOMMENDED_MAX_TOKENS,
@@ -72,6 +74,7 @@ _LOGGER = logging.getLogger(__name__)
 STEP_USER_DATA_SCHEMA = vol.Schema(
     {
         vol.Required(CONF_API_KEY): str,
+        vol.Optional(CONF_BASE_URL, default=DEFAULT_BASE_URL): str,
     }
 )
 
@@ -88,7 +91,9 @@ async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> None:
     Data has the keys from STEP_USER_DATA_SCHEMA with values provided by the user.
     """
     client = openai.AsyncOpenAI(
-        api_key=data[CONF_API_KEY], http_client=get_async_client(hass)
+        api_key=data[CONF_API_KEY],
+        base_url=data.get(CONF_BASE_URL, DEFAULT_BASE_URL),
+        http_client=get_async_client(hass)
     )
     await hass.async_add_executor_job(client.with_options(timeout=10.0).models.list)
 
