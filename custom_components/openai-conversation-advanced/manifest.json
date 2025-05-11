@@ -1,6 +1,7 @@
 {
   "domain": "openai_conversation_advanced",
   "name": "OpenAI Conversation Advanced",
+  "version": "1.0.0",
   "after_dependencies": ["assist_pipeline", "intent"],
   "codeowners": ["@ufuksahin"],
   "config_flow": true,
